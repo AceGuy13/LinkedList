@@ -142,7 +142,16 @@ class List
 	// size does not imply capacity
 	public int GetSize()
 	{
-    return 0;
+		Node temp = new Node();
+		temp.setLink(head.getLink());
+        int count = 0;
+        do
+        {
+            count++;
+          	temp.next();
+        }
+				while (temp.getLink() != null)
+        return count;
 	}
 
 	// inserts an item before the current element
